@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Contact - Ryan Mark Portfolio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/rylogo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/rylogo.png">
+  <link rel="shortcut icon" href="assets/rylogo.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    /* Proper Content Spacing */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Add proper container spacing - not too wide, not too narrow */
+    .container {
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+      padding: 0 20px !important;
+    }
+    
+    /* Responsive container padding */
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 40px !important;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 60px !important;
+      }
+    }
+
+    /* Contact Cards Responsive */
+    .contact-cards {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 20px !important;
+      margin-bottom: 40px !important;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-cards {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        margin-bottom: 30px !important;
+      }
+    }
+    
+    /* Contact Card Individual Styling */
+    .contact-card {
+      background: #fff !important;
+      border-radius: 20px !important;
+      padding: 35px 45px !important;
+      text-align: center !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+      transition: transform 0.3s ease !important;
+      max-width: 320px !important;
+      margin: 0 auto !important;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px) !important;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-card {
+        padding: 25px 30px !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .contact-card {
+        padding: 20px 25px !important;
+        border-radius: 15px !important;
+      }
+    }
+
+    /* Header Styles */
+    .header {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #6b7280;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #2b3990;
+    }
+
+    .nav-links .btn {
+      background: #2b3990;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .nav-links .btn:hover {
+      background: #1e2875;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu {
+        display: block;
+      }
+      
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        gap: 20px;
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 18px;
+      }
+    }
+
+    button:hover {
+      background:#4c63d2 !important;
+    }
+    input:focus, textarea:focus {
+      background:#d1d5db !important;
+    }
+    
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-content {
+        flex-direction: column !important;
+        gap: 40px !important;
+      }
+      
+      .contact-page h1 {
+        font-size: 48px !important;
+      }
+      
+      .contact-page h2 {
+        font-size: 36px !important;
+      }
+      
+      .contact-page p {
+        font-size: 18px !important;
+      }
+      
+      .form-row {
+        flex-direction: column !important;
+        gap: 20px !important;
+      }
+      
+      .contact-page input,
+      .contact-page textarea {
+        font-size: 16px !important;
+        padding: 18px 24px !important;
+      }
+      
+      .contact-page button {
+        font-size: 18px !important;
+        padding: 20px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="header">
+    <!-- Logo -->
+    <a href="index.html" style="display:flex;align-items:center;">
+      <img src="assets/rylogo.png" alt="Ryan Mark Logo" style="height:40px;width:auto;" onerror="this.style.display='none'">
+    </a>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu" onclick="toggleMobileMenu()">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2b3990" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html" class="btn" style="background:#1e2875;">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="contact-page" style="background:linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);min-height:100vh;padding:120px 0;">
+    <div class="container" style="max-width:1600px;width:100%;margin:0 auto;padding:0 60px;">
+      
+      <!-- Header Section -->
+      <div style="text-align:center;margin-bottom:100px;">
+        <h1 style="color:#1f2937;font-size:80px;font-weight:700;margin-bottom:60px;">Grateful to talk to you!</h1>
+      </div>
+
+      <!-- Contact Info Cards -->
+      <div class="contact-cards" style="display:flex;gap:30px;margin-bottom:80px;justify-content:center;">
+        <!-- Call Us Card -->
+        <div class="contact-card" style="background:#fff;border-radius:20px;padding:35px 45px;text-align:center;flex:1;max-width:320px;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+          <div style="color:#5e72e4;font-size:50px;margin-bottom:15px;">📞</div>
+          <p style="color:#9ca3af;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;">CALL ME</p>
+          <p style="color:#1f2937;font-size:20px;font-weight:600;">0995 613 9821</p>
+        </div>
+
+        <!-- Email Us Card -->
+        <div class="contact-card" style="background:#fff;border-radius:20px;padding:35px 45px;text-align:center;flex:1;max-width:320px;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+          <div style="color:#5e72e4;font-size:50px;margin-bottom:15px;">✉️</div>
+          <p style="color:#9ca3af;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;">EMAIL ME</p>
+          <p style="color:#1f2937;font-size:20px;font-weight:600;">lotarinoryan@gmail.com</p>
+        </div>
+
+        <!-- Location Card -->
+        <div class="contact-card" style="background:#fff;border-radius:20px;padding:35px 45px;text-align:center;flex:1;max-width:320px;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+          <div style="color:#5e72e4;font-size:50px;margin-bottom:15px;">📍</div>
+          <p style="color:#9ca3af;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;">LOCATION</p>
+          <p style="color:#1f2937;font-size:20px;font-weight:600;">Gallarde St. Digos City</p>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <div class="contact-content" style="display:flex;gap:100px;align-items:flex-start;">
+        <!-- Left Side - Text -->
+        <div style="flex:1;">
+          <h2 style="color:#1f2937;font-size:64px;font-weight:700;margin-bottom:30px;line-height:1.2;">Let's Work Together</h2>
+          <p style="color:#6b7280;font-size:26px;line-height:1.6;">Share your vision for your next projects with me now. Please contact me for basic questions, here to help!</p>
+        </div>
+
+        <!-- Right Side - Form -->
+        <div style="flex:1;">
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display:flex;flex-direction:column;gap:30px;">
+            <div class="form-row" style="display:flex;gap:30px;">
+              <input type="text" name="first_name" placeholder="First Name" required style="flex:1;padding:22px 28px;border:none;border-radius:15px;background:#e5e7eb;font-size:20px;outline:none;">
+              <input type="text" name="last_name" placeholder="Last Name" required style="flex:1;padding:22px 28px;border:none;border-radius:15px;background:#e5e7eb;font-size:20px;outline:none;">
+            </div>
+            
+            <input type="email" name="email" placeholder="Email Address" required style="padding:22px 28px;border:none;border-radius:15px;background:#e5e7eb;font-size:20px;outline:none;">
+            
+            <div class="form-row" style="display:flex;gap:30px;">
+              <input type="text" name="service" placeholder="Service Interested In" style="flex:1;padding:22px 28px;border:none;border-radius:15px;background:#e5e7eb;font-size:20px;outline:none;">
+              <input type="text" name="subject" placeholder="Subject" style="flex:1;padding:22px 28px;border:none;border-radius:15px;background:#e5e7eb;font-size:20px;outline:none;">
+            </div>
+            
+            <textarea name="message" placeholder="Tell Us About Your Projects" required rows="7" style="padding:22px 28px;border:none;border-radius:15px;background:#e5e7eb;font-size:20px;outline:none;resize:vertical;"></textarea>
+            
+            <button type="submit" style="background:#5e72e4;color:#fff;padding:25px;border:none;border-radius:15px;font-size:24px;font-weight:600;cursor:pointer;transition:background 0.3s;">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="successModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;">
+    <div style="background:#fff;border-radius:20px;padding:60px;text-align:center;max-width:500px;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideIn 0.3s ease;">
+      <div style="width:80px;height:80px;background:#10b981;border-radius:50%;margin:0 auto 30px;display:flex;align-items:center;justify-content:center;">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h2 style="color:#1f2937;font-size:32px;font-weight:700;margin-bottom:15px;">Successfully Sent!</h2>
+      <p style="color:#6b7280;font-size:18px;margin-bottom:30px;">Thank you for reaching out! I'll get back to you as soon as possible.</p>
+      <button onclick="closeSuccessModal()" style="background:#5e72e4;color:#fff;padding:15px 40px;border:none;border-radius:10px;font-size:18px;font-weight:600;cursor:pointer;">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    function closeSuccessModal() {
+      document.getElementById('successModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Handle form submission for static site
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show success modal
+      document.getElementById('successModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      
+      // Reset form
+      this.reset();
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const nav = document.querySelector('.header');
+      const navLinks = document.getElementById('navLinks');
+      const menuBtn = document.querySelector('.mobile-menu');
+      
+      if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

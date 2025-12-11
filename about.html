@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>About - Ryan Mark Portfolio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/rylogo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/rylogo.png">
+  <link rel="shortcut icon" href="assets/rylogo.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    /* Proper Content Spacing */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Add proper container spacing - not too wide, not too narrow */
+    .container {
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+      padding: 0 20px !important;
+    }
+    
+    /* Responsive container padding */
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 40px !important;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 60px !important;
+      }
+    }
+
+    /* Header Styles */
+    .header {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #6b7280;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #2b3990;
+    }
+
+    .nav-links .btn {
+      background: #2b3990;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .nav-links .btn:hover {
+      background: #1e2875;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu {
+        display: block;
+      }
+      
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        gap: 20px;
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 18px;
+      }
+    }
+
+    .tab-btn {
+      transition: all 0.3s;
+    }
+
+    .tab-btn:hover {
+      background: #2b3990 !important;
+      color: #fff !important;
+    }
+
+    .tab-btn.active {
+      background: #2b3990 !important;
+      color: #fff !important;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column !important;
+        gap: 40px !important;
+      }
+      
+      .about-page h1 {
+        font-size: 48px !important;
+      }
+      
+      .about-page h2 {
+        font-size: 24px !important;
+      }
+      
+      .about-page p {
+        font-size: 16px !important;
+      }
+      
+      .tab-buttons {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+      }
+      
+      .tab-btn {
+        flex: 1 !important;
+        min-width: calc(50% - 5px) !important;
+        font-size: 14px !important;
+        padding: 12px 20px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="header">
+    <!-- Logo -->
+    <a href="index.html" style="display:flex;align-items:center;">
+      <img src="assets/rylogo.png" alt="Ryan Mark Logo" style="height:40px;width:auto;" onerror="this.style.display='none'">
+    </a>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu" onclick="toggleMobileMenu()">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2b3990" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html" style="color:#2b3990;">About Me</a></li>
+      <li><a href="contact.html" class="btn">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="about-page" style="background:linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);min-height:100vh;padding:80px 0;">
+    <div class="container" style="max-width:1400px;width:100%;margin:0 auto;padding:0 40px;">
+      
+      <!-- About Me Text -->
+      <div style="background:#fff;border-radius:30px;padding:40px;margin-bottom:60px;max-width:900px;margin-left:auto;margin-right:auto;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+        <h2 style="color:#2b3990;font-size:32px;font-weight:700;margin-bottom:20px;">ABOUT ME</h2>
+        <p style="color:#444;font-size:20px;line-height:1.8;">I'm a creative UI/UX designer who loves telling stories through visuals. I pay close attention to the little details and enjoy making designs that not only look good but also have a clear purpose. Whether it's branding, digital art, or print work, my goal is always to create designs that make an impact.</p>
+      </div>
+
+      <!-- Tabs and Content -->
+      <div class="about-content" style="display:flex;gap:60px;">
+        
+        <!-- Left Side - Tabs -->
+        <div style="flex:1;">
+          <div class="tab-buttons" style="display:flex;flex-direction:column;gap:20px;">
+            <button class="tab-btn active" onclick="showTab('education')" style="background:#2b3990;color:#fff;padding:15px 30px;border:none;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;text-align:left;">EDUCATION</button>
+            <button class="tab-btn" onclick="showTab('experience')" style="background:#fff;color:#2b3990;padding:15px 30px;border:2px solid #2b3990;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;text-align:left;">EXPERIENCE</button>
+            <button class="tab-btn" onclick="showTab('skills')" style="background:#fff;color:#2b3990;padding:15px 30px;border:2px solid #2b3990;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;text-align:left;">SKILLS</button>
+            <button class="tab-btn" onclick="showTab('achievement')" style="background:#fff;color:#2b3990;padding:15px 30px;border:2px solid #2b3990;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;text-align:left;">ACHIEVEMENT</button>
+          </div>
+
+          <!-- Statistics -->
+          <div style="margin-top:60px;">
+            <div style="margin-bottom:30px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+                <span style="color:#1f2937;font-weight:600;">Graphic Design</span>
+                <span style="color:#1f2937;font-weight:600;">75%</span>
+              </div>
+              <div style="background:#e5e7eb;height:10px;border-radius:10px;overflow:hidden;">
+                <div style="background:#5e72e4;height:100%;width:75%;border-radius:10px;"></div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:30px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+                <span style="color:#1f2937;font-weight:600;">Website Design</span>
+                <span style="color:#1f2937;font-weight:600;">35%</span>
+              </div>
+              <div style="background:#e5e7eb;height:10px;border-radius:10px;overflow:hidden;">
+                <div style="background:#5e72e4;height:100%;width:35%;border-radius:10px;"></div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:30px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+                <span style="color:#1f2937;font-weight:600;">App Design</span>
+                <span style="color:#1f2937;font-weight:600;">35%</span>
+              </div>
+              <div style="background:#e5e7eb;height:10px;border-radius:10px;overflow:hidden;">
+                <div style="background:#5e72e4;height:100%;width:35%;border-radius:10px;"></div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:30px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+                <span style="color:#1f2937;font-weight:600;">UX/UI Design</span>
+                <span style="color:#1f2937;font-weight:600;">35%</span>
+              </div>
+              <div style="background:#e5e7eb;height:10px;border-radius:10px;overflow:hidden;">
+                <div style="background:#5e72e4;height:100%;width:35%;border-radius:10px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Tab Content -->
+        <div style="flex:1;">
+          
+          <!-- Education Tab -->
+          <div id="education" class="tab-content" style="background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+            <h3 style="color:#2b3990;font-size:24px;font-weight:700;margin-bottom:30px;">Education</h3>
+            
+            <div style="margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #e5e7eb;">
+              <h4 style="color:#1f2937;font-size:18px;font-weight:600;margin-bottom:5px;">Bachelor of Science in Information Technology</h4>
+              <p style="color:#5e72e4;font-weight:600;margin-bottom:5px;">Cor Jesu College</p>
+              <p style="color:#6b7280;font-size:14px;">2021 - 2025</p>
+            </div>
+
+            <div style="margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #e5e7eb;">
+              <h4 style="color:#1f2937;font-size:18px;font-weight:600;margin-bottom:5px;">Senior High School - ICT Strand</h4>
+              <p style="color:#5e72e4;font-weight:600;margin-bottom:5px;">Cor Jesu College</p>
+              <p style="color:#6b7280;font-size:14px;">2019 - 2021</p>
+            </div>
+          </div>
+
+          <!-- Experience Tab -->
+          <div id="experience" class="tab-content" style="display:none;background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+            <h3 style="color:#2b3990;font-size:24px;font-weight:700;margin-bottom:30px;">Experience</h3>
+            
+            <div style="margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #e5e7eb;">
+              <h4 style="color:#1f2937;font-size:18px;font-weight:600;margin-bottom:5px;">Freelance UI/UX Designer</h4>
+              <p style="color:#5e72e4;font-weight:600;margin-bottom:5px;">Self-Employed</p>
+              <p style="color:#6b7280;font-size:14px;margin-bottom:10px;">2023 - Present</p>
+              <p style="color:#444;font-size:14px;">Creating user-centered designs for web and mobile applications, focusing on intuitive interfaces and seamless user experiences.</p>
+            </div>
+
+            <div style="margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #e5e7eb;">
+              <h4 style="color:#1f2937;font-size:18px;font-weight:600;margin-bottom:5px;">Graphic Design Intern</h4>
+              <p style="color:#5e72e4;font-weight:600;margin-bottom:5px;">Local Design Studio</p>
+              <p style="color:#6b7280;font-size:14px;margin-bottom:10px;">2022 - 2023</p>
+              <p style="color:#444;font-size:14px;">Assisted in creating visual content for various clients, including logos, branding materials, and digital graphics.</p>
+            </div>
+          </div>
+
+          <!-- Skills Tab -->
+          <div id="skills" class="tab-content" style="display:none;background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+            <h3 style="color:#2b3990;font-size:24px;font-weight:700;margin-bottom:30px;">Skills</h3>
+            
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:20px;">
+              <div>
+                <h4 style="color:#1f2937;font-size:16px;font-weight:600;margin-bottom:10px;">Design Tools</h4>
+                <ul style="color:#6b7280;font-size:14px;line-height:1.8;margin:0;padding-left:20px;">
+                  <li>Adobe Photoshop</li>
+                  <li>Adobe Illustrator</li>
+                  <li>Figma</li>
+                  <li>Canva</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 style="color:#1f2937;font-size:16px;font-weight:600;margin-bottom:10px;">Development</h4>
+                <ul style="color:#6b7280;font-size:14px;line-height:1.8;margin:0;padding-left:20px;">
+                  <li>HTML/CSS</li>
+                  <li>JavaScript</li>
+                  <li>PHP</li>
+                  <li>Laravel</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 style="color:#1f2937;font-size:16px;font-weight:600;margin-bottom:10px;">Specialties</h4>
+                <ul style="color:#6b7280;font-size:14px;line-height:1.8;margin:0;padding-left:20px;">
+                  <li>UI/UX Design</li>
+                  <li>Responsive Design</li>
+                  <li>Brand Identity</li>
+                  <li>User Research</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievement Tab -->
+          <div id="achievement" class="tab-content" style="display:none;background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+            <h3 style="color:#2b3990;font-size:24px;font-weight:700;margin-bottom:30px;">Achievements</h3>
+            
+            <div style="margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #e5e7eb;">
+              <h4 style="color:#1f2937;font-size:18px;font-weight:600;margin-bottom:5px;">Dean's List</h4>
+              <p style="color:#5e72e4;font-weight:600;margin-bottom:5px;">Cor Jesu College</p>
+              <p style="color:#6b7280;font-size:14px;margin-bottom:10px;">2023</p>
+              <p style="color:#444;font-size:14px;">Achieved academic excellence with outstanding performance in Information Technology courses.</p>
+            </div>
+
+            <div style="margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #e5e7eb;">
+              <h4 style="color:#1f2937;font-size:18px;font-weight:600;margin-bottom:5px;">Best Design Portfolio</h4>
+              <p style="color:#5e72e4;font-weight:600;margin-bottom:5px;">College Design Competition</p>
+              <p style="color:#6b7280;font-size:14px;margin-bottom:10px;">2022</p>
+              <p style="color:#444;font-size:14px;">Won first place in the annual design portfolio competition showcasing creative and innovative design solutions.</p>
+            </div>
+
+            <div style="margin-bottom:30px;">
+              <h4 style="color:#1f2937;font-size:18px;font-weight:600;margin-bottom:5px;">Certified UI/UX Designer</h4>
+              <p style="color:#5e72e4;font-weight:600;margin-bottom:5px;">Online Certification Program</p>
+              <p style="color:#6b7280;font-size:14px;margin-bottom:10px;">2023</p>
+              <p style="color:#444;font-size:14px;">Completed comprehensive UI/UX design certification covering user research, prototyping, and design systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    function showTab(tabName) {
+      // Hide all tab contents
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(content => {
+        content.style.display = 'none';
+      });
+
+      // Remove active class from all buttons
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      tabBtns.forEach(btn => {
+        btn.classList.remove('active');
+        btn.style.background = '#fff';
+        btn.style.color = '#2b3990';
+      });
+
+      // Show selected tab content
+      document.getElementById(tabName).style.display = 'block';
+
+      // Add active class to clicked button
+      event.target.classList.add('active');
+      event.target.style.background = '#2b3990';
+      event.target.style.color = '#fff';
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const nav = document.querySelector('.header');
+      const navLinks = document.getElementById('navLinks');
+      const menuBtn = document.querySelector('.mobile-menu');
+      
+      if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
