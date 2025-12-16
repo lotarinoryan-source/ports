@@ -210,70 +210,70 @@
         <p style="color:#444;font-size:20px;line-height:1.8;">I'm a creative Graphic Designer who loves telling stories through visuals. I pay close attention to the little details and enjoy making designs that not only look good but also have a clear purpose. Whether it's branding or print work, my goal is always to create designs that make an impact.</p>
       </div>
 
-      <!-- Tabs and Content -->
-      <div class="about-content" style="display:flex;gap:60px;">
+      <!-- Navigation Tabs -->
+      <div style="display:flex;justify-content:center;margin-bottom:40px;">
+        <div class="tab-buttons" style="display:flex;gap:15px;flex-wrap:wrap;">
+          <button class="tab-btn active" onclick="showTab('education')" style="background:#2b3990;color:#fff;padding:12px 25px;border:none;border-radius:25px;font-size:16px;font-weight:600;cursor:pointer;">EDUCATION</button>
+          <button class="tab-btn" onclick="showTab('experience')" style="background:#fff;color:#2b3990;padding:12px 25px;border:2px solid #2b3990;border-radius:25px;font-size:16px;font-weight:600;cursor:pointer;">EXPERIENCE</button>
+          <button class="tab-btn" onclick="showTab('skills')" style="background:#fff;color:#2b3990;padding:12px 25px;border:2px solid #2b3990;border-radius:25px;font-size:16px;font-weight:600;cursor:pointer;">SKILLS</button>
+          <button class="tab-btn" onclick="showTab('achievement')" style="background:#fff;color:#2b3990;padding:12px 25px;border:2px solid #2b3990;border-radius:25px;font-size:16px;font-weight:600;cursor:pointer;">ACHIEVEMENT</button>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="about-content" style="display:flex;gap:40px;align-items:flex-start;">
         
-        <!-- Left Side - Tabs -->
-        <div style="flex:1;">
-          <div class="tab-buttons" style="display:flex;flex-direction:column;gap:20px;">
-            <button class="tab-btn active" onclick="showTab('education')" style="background:#2b3990;color:#fff;padding:15px 30px;border:none;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;text-align:left;">EDUCATION</button>
-            <button class="tab-btn" onclick="showTab('experience')" style="background:#fff;color:#2b3990;padding:15px 30px;border:2px solid #2b3990;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;text-align:left;">EXPERIENCE</button>
-            <button class="tab-btn" onclick="showTab('skills')" style="background:#fff;color:#2b3990;padding:15px 30px;border:2px solid #2b3990;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;text-align:left;">SKILLS</button>
-            <button class="tab-btn" onclick="showTab('achievement')" style="background:#fff;color:#2b3990;padding:15px 30px;border:2px solid #2b3990;border-radius:50px;font-size:18px;font-weight:600;cursor:pointer;text-align:left;">ACHIEVEMENT</button>
+        <!-- Left Side - Skills Statistics -->
+        <div style="flex:1;background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,0.08);min-height:500px;">
+          <h3 style="color:#2b3990;font-size:28px;font-weight:700;margin-bottom:35px;text-align:center;">My Skills</h3>
+          
+          <!-- Graphic Design - 80% -->
+          <div style="margin-bottom:30px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+              <span style="color:#1f2937;font-weight:600;font-size:18px;">Graphic Design</span>
+              <span style="color:#5e72e4;font-weight:700;font-size:18px;">80%</span>
+            </div>
+            <div style="background:#e8eaf6;height:14px;border-radius:20px;overflow:hidden;">
+              <div style="background:linear-gradient(90deg, #5e72e4 0%, #4c63d2 100%);height:100%;width:80%;border-radius:20px;transition:width 1s ease;"></div>
+            </div>
           </div>
 
-          <!-- Skills Statistics -->
-          <div style="margin-top:60px;background:#fff;border-radius:20px;padding:30px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-            <h3 style="color:#2b3990;font-size:24px;font-weight:700;margin-bottom:30px;text-align:center;">My Skills</h3>
-            
-            <!-- Graphic Design - 80% -->
-            <div style="margin-bottom:25px;">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <span style="color:#1f2937;font-weight:600;font-size:16px;">Graphic Design</span>
-                <span style="color:#5e72e4;font-weight:700;font-size:16px;">80%</span>
-              </div>
-              <div style="background:#e8eaf6;height:12px;border-radius:15px;overflow:hidden;">
-                <div style="background:linear-gradient(90deg, #5e72e4 0%, #4c63d2 100%);height:100%;width:80%;border-radius:15px;transition:width 0.8s ease;"></div>
-              </div>
+          <!-- Website Design - 35% -->
+          <div style="margin-bottom:30px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+              <span style="color:#1f2937;font-weight:600;font-size:18px;">Website Design</span>
+              <span style="color:#5e72e4;font-weight:700;font-size:18px;">35%</span>
             </div>
-
-            <!-- Website Design - 35% -->
-            <div style="margin-bottom:25px;">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <span style="color:#1f2937;font-weight:600;font-size:16px;">Website Design</span>
-                <span style="color:#5e72e4;font-weight:700;font-size:16px;">35%</span>
-              </div>
-              <div style="background:#e8eaf6;height:12px;border-radius:15px;overflow:hidden;">
-                <div style="background:linear-gradient(90deg, #5e72e4 0%, #4c63d2 100%);height:100%;width:35%;border-radius:15px;transition:width 0.8s ease;"></div>
-              </div>
+            <div style="background:#e8eaf6;height:14px;border-radius:20px;overflow:hidden;">
+              <div style="background:linear-gradient(90deg, #5e72e4 0%, #4c63d2 100%);height:100%;width:35%;border-radius:20px;transition:width 1s ease;"></div>
             </div>
+          </div>
 
-            <!-- App Design - 25% -->
-            <div style="margin-bottom:25px;">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <span style="color:#1f2937;font-weight:600;font-size:16px;">App Design</span>
-                <span style="color:#5e72e4;font-weight:700;font-size:16px;">25%</span>
-              </div>
-              <div style="background:#e8eaf6;height:12px;border-radius:15px;overflow:hidden;">
-                <div style="background:linear-gradient(90deg, #5e72e4 0%, #4c63d2 100%);height:100%;width:25%;border-radius:15px;transition:width 0.8s ease;"></div>
-              </div>
+          <!-- App Design - 25% -->
+          <div style="margin-bottom:30px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+              <span style="color:#1f2937;font-weight:600;font-size:18px;">App Design</span>
+              <span style="color:#5e72e4;font-weight:700;font-size:18px;">25%</span>
             </div>
+            <div style="background:#e8eaf6;height:14px;border-radius:20px;overflow:hidden;">
+              <div style="background:linear-gradient(90deg, #5e72e4 0%, #4c63d2 100%);height:100%;width:25%;border-radius:20px;transition:width 1s ease;"></div>
+            </div>
+          </div>
 
-            <!-- UX/UI Design - 40% -->
-            <div style="margin-bottom:0;">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <span style="color:#1f2937;font-weight:600;font-size:16px;">UX/UI Design</span>
-                <span style="color:#5e72e4;font-weight:700;font-size:16px;">40%</span>
-              </div>
-              <div style="background:#e8eaf6;height:12px;border-radius:15px;overflow:hidden;">
-                <div style="background:linear-gradient(90deg, #5e72e4 0%, #4c63d2 100%);height:100%;width:40%;border-radius:15px;transition:width 0.8s ease;"></div>
-              </div>
+          <!-- UX/UI Design - 40% -->
+          <div style="margin-bottom:0;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+              <span style="color:#1f2937;font-weight:600;font-size:18px;">UX/UI Design</span>
+              <span style="color:#5e72e4;font-weight:700;font-size:18px;">40%</span>
+            </div>
+            <div style="background:#e8eaf6;height:14px;border-radius:20px;overflow:hidden;">
+              <div style="background:linear-gradient(90deg, #5e72e4 0%, #4c63d2 100%);height:100%;width:40%;border-radius:20px;transition:width 1s ease;"></div>
             </div>
           </div>
         </div>
 
         <!-- Right Side - Tab Content -->
-        <div style="flex:1;">
+        <div style="flex:1;background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,0.08);min-height:500px;">
           
           <!-- Education Tab -->
           <div id="education" class="tab-content" style="background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
